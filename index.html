@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Project Title</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="og:title" content="Air Quality Prediciton">
+  <meta name="author" content="Advith Ashok">
+  <meta name="og:image" content="static/logo1.png">
+  <meta name="Keywords" content="Flask, Machine Learning, Deep Learning, Artificial Intelligence, AI, ML,DL, Web Development">
+  <meta name="description" content="virtual sensor/ air qualtiy index.">
+  <title>Air Quality Prediciton</title>
+  <link rel="icon" href="{{ url_for('static', filename = 'logo1.png') }}" type="image/icon type">
+  <p> Air Quality Prediciton </p>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/sticky-footer/">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+  <style>
+    #home, #form1, #form2, #form3, #form4{
+      display: none;
+      border: 1px solid black;
+      padding: 25px 50px;
+      width: 70%;
+      margin: auto;
+        
+    }
+    #home.active, #form1.active, #form2.active, #form3.active, #form4.active{
+        
+        display: block;
+}
+#form1 button, #form2 button{
+  background-color: greenyellow;
+}
+#form1 button:hover, #form2 button:hover{
+  background-color: green;
+}
+
+#form1 a, #form2 a{
+  color: blue;
+}
+#form1 a:hover, #form2 a:hover{
+  color: brown;
+}
+  </style>
+</head>
+<body>
+
+	<nav class="navbar navbar-expand-sm navbar-dark fixed-top bg-dark" style="background-color: black !important;">
+    <a style="text-decoration: none; color: white" href="{{ url_for('home') }}">Air Quality Prediciton</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+     </button>
+     <div class="collapse navbar-collapse" id="navbarNav">
+       <ul class="navbar-nav ml-auto">
+         <li class="nav-item active">
+           <a href="{{ url_for('home') }}" class="nav-link">Home</a>
+         </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="{{ url_for('index') }}">User</a>
+          </li>
+       </ul>
+     </div>
+   </nav>
+  <br><br><br>
+<div class="container">
+    <form  method="post" action="{{ url_for('userlog')}}" id="form1" class="active">
+      <h2>User Login</h2>
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" class="form-control" id="username" placeholder="Enter username" name="name">
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" class="form-control" id="password" placeholder="Enter password" name="password">
+      </div>
+      <button type="submit" class="btn btn-default">Submit</button></br></br>
+      <p>Click here to <a data-value="#form2" onclick="toggleform(event)">Sign up</a></p>
+    </form>
+
+    
+    <form method="post" action="{{ url_for('userreg')}}" id="form2">
+      <h2>User Regestration</h2>
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" class="form-control" id="username" placeholder="Enter username" name="name">
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+      </div>
+      <div class="form-group">
+        <label for="phone">Mobile No.:</label>
+        <input type="tel" class="form-control" id="phone" placeholder="Enter mobile number" name="phone">
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" class="form-control" id="password" placeholder="Enter password" name="password">
+      </div>
+      <button type="submit" class="btn btn-default">Submit</button></br></br>
+      <p>Click here to <a data-value="#form1" onclick="toggleform(event)">Sign in</a></p>
+    </form>
+
+</div>
+
+<script>
+    function toggleform(e) {
+    var Id =(e.target.getAttribute('data-value'))
+    let Items= ['#form1', '#form2'];
+    Items.map(function(item) {
+        if(Id === item ) {
+            $(item).addClass("active");
+        }
+        else {
+        $(item).removeClass("active");
+        }
+    })
+}
+
+</script>
+</body>
+</html>

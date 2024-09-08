@@ -1,0 +1,96 @@
+{% extends 'main2.html' %}
+{% block content %}
+
+<div class="row"  style="margin-bottom: 50px;">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <center><h1>Virtual Sensor</h1></center> <br>
+        <div class="card card-body" style="border: 1px solid black;">
+            <form class="form-horizontal" action="{{ url_for('predictPage') }}" method="POST">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input style="border: 1px solid black;" class="form-control" type="text" name="PM2.5" placeholder="PM2.5" required step="any">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input style="border: 1px solid black;" class="form-control" type="number" name="PM10" placeholder="PM10" required step="any">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input style="border: 1px solid black;" class="form-control" type="number" name="NO" placeholder="NO" required step="any">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input style="border: 1px solid black;" class="form-control" type="number" name="NO2" placeholder="NO2" required step="any">
+                        </div>
+                    </div>
+                
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input style="border: 1px solid black;" class="form-control" type="number" name="NOx" placeholder="NOx" required step="any">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input style="border: 1px solid black;" class="form-control" type="number" name="NH3" placeholder="NH3" required step="any">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input style="border: 1px solid black;" class="form-control" type="number" name="CO" placeholder="CO" required step="any">
+                        </div>
+                    </div>
+                
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input style="border: 1px solid black;" class="form-control" type="number" name="SO2" placeholder="SO2" required step="any">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input style="border: 1px solid black;" class="form-control" type="number" name="O3" placeholder="O3" required step="any">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input style="border: 1px solid black;" class="form-control" type="number" name="Benzene" placeholder="Benzene" required step="any">
+                        </div>
+                    </div>
+                
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input style="border: 1px solid black;" class="form-control" type="number" name="Toluene" placeholder="Toluene" required step="any">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input style="border: 1px solid black;" class="form-control" type="number" name="Xylene" placeholder="Xylene" required step="any">
+                        </div>
+                    </div>
+                </div>
+                
+                <input type="submit" class="btn btn-info btn-block" value="Predict" required step="any">
+            </form>
+        </div>
+    </div>
+    <div class="col-md-2"></div>
+</div> 
+<div class="container">
+
+<h1 style="text-align: center"> </h1> <br>
+
+
+
+
+</div>
+{% endblock %}
