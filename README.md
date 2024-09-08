@@ -11,7 +11,7 @@ A machine learning model for predicting the Air Quality Index (AQI) using virtua
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Advith023/aqi-predictor.git
+   git clone https://github.com/Advith023/aqi-predictor
 cd aqi-predictor
 pip install -r requirements.txt
 python app.py
