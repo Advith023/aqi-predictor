@@ -1,0 +1,100 @@
+{% extends 'main.html' %}
+{% block content %}
+{% if message %}
+        <div class="alert alert-danger">{{ message }}</div>
+    {% endif %}
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Air Quality Prediction</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/carousel/">
+
+    
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      #acc{
+        color: blue;
+      }
+      #acc:hover{
+        color: brown;
+      }
+    </style>
+  </head>
+  <body style="background-image: url('static/front.jpg'); background-size: 100% 100vh; background-repeat: no-repeat; ">
+
+    
+    <main role="main">
+
+      <section class="jumbotron p-3 p-md-5 text-white rounded bg-dark text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading">Air Quality Prediciton</h1>
+          <p class="lead">Air quality prediction is crucial for public health due to the increasing concern over pollution levels. In this study, the effectiveness of machine learning algorithms is explored in predicting the Air Quality Index (AQI) using a carefully selected subset of environmental features. The aim is to develop an efficient and accurate predictive model that can inform proactive measures to maintain air quality.</p>
+          
+        </div>
+      </section>
+
+      <div class="container">
+
+      <div class="row mb-2">
+        <div class="col-md-12">
+          <div class="card flex-md-row mb-4 box-shadow h-md-250">
+            <div class="card-body d-flex flex-column align-items-start">
+              <strong class="d-inline-block mb-2 text-primary">Machine Learning</strong>
+              <h3 class="mb-0">
+                <a class="text-dark">Random Forest</a>
+              </h3>
+              <div class="mb-1 text-muted">For  Classification</div>
+              <a id="acc" data-toggle="modal" data-target="#myModal">Click here to check accuracy</a>
+              <p class="card-text mb-auto">Random Forest is a powerful supervised learning algorithm renowned for its ability to handle complex datasets. By building multiple decision trees and aggregating their outputs, Random Forest improves prediction accuracy and stability. This ensemble method excels in both classification and regression tasks, making it a preferred choice for environmental data analysis.</p>
+              
+            </div>
+          </div>
+        </div>
+       </div>
+       </div>
+       
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Accuracy and loss graph for RandomForest</h4>
+      </div>
+      <div class="modal-body">
+        <img src="http://127.0.0.1:5000/static/acc.png" alt="">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+        
+
+      
+      </section>
+
+      
+    </main>
+
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+   
+    <script src="../../assets/js/vendor/holder.min.js"></script>
+  </body>
+</html>
+
+{% endblock %}
