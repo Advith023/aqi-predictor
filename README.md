@@ -80,3 +80,7 @@ tests/                 pytest suite
 ## Changelog
 
 **2026-11:** Rebuilt. Removed the login/registration system and its SQLite database (also purged from git history); fixed AQI category gaps (e.g. 50.5, 100, or >500 previously returned no category and crashed the page); restructured into `templates/`/`static/`; replaced the unsplit, leaky training with a chronological train/test split and published metrics; added input validation, a JSON API and tests; replaced the Python 3.6-era requirements; consolidated the two notebooks into one clean EDA notebook.
+
+## Licence
+
+All rights reserved. The code is public to read, not to reuse. See [LICENSE](LICENSE).

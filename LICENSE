@@ -1,0 +1,17 @@
+Copyright (c) 2026 Advith Ashok. All rights reserved.
+
+This repository is public so that people can read the code and see how the
+AQI predictor works. That is the only permission given.
+
+You may not copy, modify, publish, distribute, sublicense, sell, host or
+otherwise use this code or the trained model, in whole or in part, for any
+purpose, commercial or not, without written permission from the copyright
+holder. Viewing the repository and forking it on GitHub are allowed only to
+the extent GitHub's Terms of Service require.
+
+Third-party material keeps its own terms:
+- data/city_day.csv comes from the "Air Quality Data in India (2015 to 2020)"
+  dataset by Vopani on Kaggle, compiled from Central Pollution Control Board
+  data, and remains under that dataset's own licence.
+
+For permission requests, open an issue on this repository.
