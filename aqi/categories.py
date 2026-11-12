@@ -1,3 +1,4 @@
+# AQI Predictor by Advith Ashok (github.com/Advith023/aqi-predictor). Copyright (c) 2026 Advith Ashok. All rights reserved. Not licensed for reuse; see LICENSE.
 """India CPCB National AQI categories."""
 from bisect import bisect_left
 

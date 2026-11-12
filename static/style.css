@@ -1,3 +1,4 @@
+/* AQI Predictor by Advith Ashok (github.com/Advith023/aqi-predictor). Copyright (c) 2026 Advith Ashok. All rights reserved. Not licensed for reuse; see LICENSE. */
 body { font-family: system-ui, sans-serif; margin: 0; color: #222; background: #f7f7f8; }
 nav { display: flex; gap: 1.5rem; padding: 1rem 2rem; background: #1f2937; }
 nav a { color: #e5e7eb; text-decoration: none; }
