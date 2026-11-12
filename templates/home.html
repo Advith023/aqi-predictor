@@ -2,7 +2,7 @@
 {% block content %}
 <h1>Air Quality Index predictor</h1>
 <p>Estimates the daily AQI (India CPCB scale) from 12 pollutant concentrations, acting as a
-  "virtual sensor" when a station's AQI is unavailable. Trained on CPCB daily data for 26 Indian cities, 2015–2020.</p>
+  "virtual sensor" when a station's AQI is unavailable. Trained on CPCB daily data for 26 Indian cities, 2015 to 2020.</p>
 <p><a class="button" href="{{ url_for('predict_page') }}">Make a prediction</a></p>
 
 {% set m = metrics.test[metrics.selected_model] %}

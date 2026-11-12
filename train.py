@@ -108,7 +108,7 @@ def main():
     lim = [0, np.percentile(np.r_[y, p], 99.5)]
     ax.plot(lim, lim, color="black", lw=1)
     ax.set(xlim=lim, ylim=lim, xlabel="Actual AQI", ylabel="Predicted AQI",
-           title=f"{best}: test set 2019–2020 (R² {test_scores[best]['r2']})")
+           title=f"{best}: test set 2019 to 2020 (R² {test_scores[best]['r2']})")
     fig.tight_layout()
     fig.savefig(docs / "predicted_vs_actual.png", dpi=120)
 
