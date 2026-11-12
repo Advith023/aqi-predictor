@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Air Quality Index predictor</h1>
+<p>Estimates the daily AQI (India CPCB scale) from 12 pollutant concentrations, acting as a
+  "virtual sensor" when a station's AQI is unavailable. Trained on CPCB daily data for 26 Indian cities, 2015–2020.</p>
+<p><a class="button" href="{{ url_for('predict_page') }}">Make a prediction</a></p>
+
+{% set m = metrics.test[metrics.selected_model] %}
+<h2>Model performance</h2>
+<p>{{ metrics.selected_model }}, evaluated on held-out future data ({{ metrics.split.test }}).</p>
+<table>
+  <tr><th>R²</th><td>{{ m.r2 }}</td></tr>
+  <tr><th>Mean absolute error</th><td>{{ m.mae }} AQI points</td></tr>
+  <tr><th>RMSE</th><td>{{ m.rmse }}</td></tr>
+  <tr><th>Correct AQI category</th><td>{{ (m.category_accuracy * 100) | round(1) }}%</td></tr>
+</table>
+{% endblock %}

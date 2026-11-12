@@ -1,0 +1,68 @@
+{
+  "selected_model": "Random forest",
+  "split": {
+    "train": "2015-01-01 to 2018-12-31 (13358 rows)",
+    "test": "2019-01-01 to 2020-07-01 (11492 rows)",
+    "validation_for_selection": "2018-07-01 to 2018-12-31"
+  },
+  "test": {
+    "Median baseline": {
+      "r2": -0.001,
+      "mae": 75.2,
+      "rmse": 120.3,
+      "category_accuracy": 0.346,
+      "category_macro_f1": 0.086
+    },
+    "Ridge regression": {
+      "r2": 0.861,
+      "mae": 25.8,
+      "rmse": 44.8,
+      "category_accuracy": 0.693,
+      "category_macro_f1": 0.644
+    },
+    "Random forest": {
+      "r2": 0.894,
+      "mae": 19.2,
+      "rmse": 39.1,
+      "category_accuracy": 0.765,
+      "category_macro_f1": 0.704
+    },
+    "Gradient boosting": {
+      "r2": 0.883,
+      "mae": 20.6,
+      "rmse": 41.1,
+      "category_accuracy": 0.743,
+      "category_macro_f1": 0.625
+    }
+  },
+  "validation": {
+    "Median baseline": {
+      "r2": -0.034,
+      "mae": 102.3,
+      "rmse": 172.7,
+      "category_accuracy": 0.323,
+      "category_macro_f1": 0.081
+    },
+    "Ridge regression": {
+      "r2": 0.869,
+      "mae": 37.7,
+      "rmse": 61.3,
+      "category_accuracy": 0.625,
+      "category_macro_f1": 0.546
+    },
+    "Random forest": {
+      "r2": 0.889,
+      "mae": 27.5,
+      "rmse": 56.7,
+      "category_accuracy": 0.749,
+      "category_macro_f1": 0.629
+    },
+    "Gradient boosting": {
+      "r2": 0.888,
+      "mae": 27.6,
+      "rmse": 56.7,
+      "category_accuracy": 0.75,
+      "category_macro_f1": 0.623
+    }
+  }
+}

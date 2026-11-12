@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Predict · AQI Predictor{% endblock %}
+{% block content %}
+<h1>Predict AQI</h1>
+<p>Daily average concentrations (µg/m³; CO in mg/m³). Leave a field blank if it wasn't measured.</p>
+
+{% if errors %}<ul class="errors">{% for e in errors %}<li>{{ e }}</li>{% endfor %}</ul>{% endif %}
+
+<form method="post" class="grid">
+  {% for f in features %}
+  <label>{{ f }}
+    <input type="number" name="{{ f }}" step="any" min="0" value="{{ form.get(f, '') }}">
+  </label>
+  {% endfor %}
+  <button type="submit">Predict</button>
+</form>
+
+{% if result %}
+<div class="result cat-{{ result.category | lower | replace(' ', '-') }}">
+  <div class="aqi">{{ result.aqi }}</div>
+  <div>{{ result.category }}</div>
+</div>
+{% endif %}
+{% endblock %}
